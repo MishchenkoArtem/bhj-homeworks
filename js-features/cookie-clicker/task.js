@@ -2,6 +2,6 @@ const cookie = document.querySelector('#cookie');
 const clickerCounter = document.querySelector('#clicker__counter');
 
 cookie.addEventListener('click', () => {
-    cookie.classList.toggle('size');
-    clickerCounter += 1;
+    cookie.width = cookie.width === 200 ? cookie.width = 250 : cookie.width = 200;
+    
 });
