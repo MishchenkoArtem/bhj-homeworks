@@ -1,14 +1,18 @@
-const rotatorCase = document.querySelector('.rotator__case');
-let currentElement = rotatorCase;
-let previousElement = rotatorCase;
+const rotatorCase = Array.from(document.querySelectorAll('.rotator__case'));
+let index = 0;
 
-const interval = setInterval(() => {
-    if (currentElement.classList.contains('rotator__case_active')) {
-
-        currentElement = currentElement.nextElementSibling;
-        previousElement = currentElement.previousElementSibling;
-
-        currentElement.classList.add('rotator__case_active');
-        previousElement.classList.remove('rotator__case_active');
+setInterval(() => {
+    
+    if (index === rotatorCase.length - 1) {
+        
+        rotatorCase[index].classList.remove('rotator__case_active');
+        index = 0;
+        rotatorCase[0].classList.add('rotator__case_active');
     }
+    
+    rotatorCase[index];
+    rotatorCase[index].classList.remove('rotator__case_active');
+    index++
+    rotatorCase[index].classList.add('rotator__case_active');
+
 }, 1000);
