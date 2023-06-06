@@ -38,12 +38,12 @@ product.forEach(element => {
         
         if (item.classList.contains('product__quantity-control_inc')) {
             let itemValueNext = item.previousElementSibling;
-            itemValueNext.textContent = Number(itemValueNext.textContent) + 1;   
+            itemValueNext.textContent = Number(itemValueNext.textContent) + 1;
         }
 
         if (item.classList.contains('product__quantity-control_dec')) {
             let itemValuePrevious = item.nextElementSibling;
-            
+
             if (Number(itemValuePrevious.textContent) === 0) {
                 return
             }
