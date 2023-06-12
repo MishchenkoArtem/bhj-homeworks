@@ -13,7 +13,7 @@ form.addEventListener("submit", (evt) => {
 });
 
 function progressHandler(event) {
-  const percentLoaded = Math.round((event.loaded / event.total) * 100)
+  const percentLoaded = Math.round(event.loaded / event.total)
 
   progress.value = percentLoaded
 }
